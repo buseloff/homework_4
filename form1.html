@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form 1</title>
+    <link rel="stylesheet" href="./css/form1.css" />
+  </head>
+  <body>
+    <a href="index.html">Вернуться обратно</a>
+    <form action="#" method="GET" enctype="text/plain" autocomplete="off">
+      <div class="userFormContainer">
+        <div class="userFormHeader">
+          <div class="crossButton"></div>
+          <div id="userPhoto">
+            <img src="./img/avatar.jpg" alt="User's Photo" />
+          </div>
+          <h2>User Login</h2>
+        </div>
+
+        <div class="userEmail">
+          <input
+            type="email"
+            name="userEmail"
+            placeholder="Enter email"
+            pattern="(\w+)@(\w+\.)(\w+)"
+            required
+            autofocus
+          />
+        </div>
+
+        <div class="userPassword">
+          <input
+            type="password"
+            name="userPass"
+            placeholder="Password"
+            required
+          />
+        </div>
+
+        <div class="userLogin">
+          <input type="submit" value="Login" formaction="#" />
+        </div>
+
+        <div class="userForgotPassword">
+          <input type="submit" value="Forgot Password?" formaction="#" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

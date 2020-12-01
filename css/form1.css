@@ -1,0 +1,151 @@
+* {
+  margin: 0 auto;
+}
+
+a {
+  display: block;
+  padding: 20px;
+  font-size: 30px;
+}
+a:visited {
+  color: gray;
+}
+a:active {
+  color: red;
+  border: 4px solid red;
+}
+
+a:link {
+  color: green;
+}
+
+a:hover {
+  font-size: 20px;
+}
+
+.userFormContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  width: 500px;
+  height: 600px;
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+}
+.crossButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: relative;
+  z-index: 1;
+  margin: 20px auto;
+  cursor: pointer;
+  bottom: 35px;
+  left: 230px;
+}
+.crossButton:before {
+  content: "+";
+  color: #337ab7;
+  position: absolute;
+  z-index: 2;
+  transform: rotate(45deg);
+  font-size: 50px;
+  line-height: 1;
+  top: -5px;
+  left: 6px;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+}
+.crossButton:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: #337ab7;
+  z-index: 1;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.2, 0.85);
+  transform: scale(0.01);
+}
+.crossButton:hover:after {
+  transform: scale(1);
+}
+.crossButton:hover:before {
+  transform: scale(0.8) rotate(45deg);
+  color: #fff;
+}
+body {
+  background-color: linen;
+}
+
+.userFormHeader {
+  display: flex;
+  flex-direction: column;
+}
+
+#userPhoto {
+  width: 200px;
+  height: 50px;
+}
+
+#userPhoto > img {
+  width: inherit;
+  height: 200px;
+  position: relative;
+  bottom: 200px;
+  border-radius: 50%;
+}
+h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 40px;
+  letter-spacing: 3px;
+  height: 50px;
+}
+
+.userEmail input[type="email"],
+.userPassword input[type="password"] {
+  box-sizing: border-box;
+  height: 50px;
+  width: 450px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.userLogin input[type="submit"] {
+  height: 50px;
+  width: 450px;
+  border: 3px solid darkgreen;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: green;
+  margin-bottom: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: lightgreen;
+}
+
+.userForgotPassword input[type="submit"] {
+  height: 100px;
+  width: 500px;
+  position: relative;
+  bottom: -15px;
+  border-radius: 0 0 5px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-top: 1px solid black;
+
+  background-color: lightgrey;
+}
+
+.userForgotPassword input[type="submit"]:hover {
+  background-color: darkgrey;
+}
